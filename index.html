@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Angular Udemy</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div ng-controller='mainController'>
+    </div>
+  </div>
+
+
+  <form name = "myForm">
+    <input type='text' ng-model='field' name='myField' required minlength='5'/>
+      <div ng-messages='myForm.myField.$error'>
+        <div ng-message= 'required'>You did not enter a field</div>
+        <div ng-message='minlength'>The value entered is too short</div>
+      </div>
+  </form>
+
+
+<div class ='container' ng-cotroller='mainController2'>
+  <div>
+    <label>What is your twitter handle?</label>
+    <input type="text" />
+  </div>
+
+  <hr />
+
+  <h1>twitter.com/{{ lowercasehandle() }}<h1>
+
+</body>
+
+  <script src="angular-messages.js" type="text/javascript" charset="utf-8" async defer></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-messages.js" type="text/javascript" charset="utf-8" async defer></script>
+
+  <script src="app.js" type="text/javascript" charset="utf-8" async defer></script>
+
+ <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</html>
